@@ -1,9 +1,7 @@
 package com.acm.market.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "clients")
@@ -20,6 +18,9 @@ public class Client {
     private Long phone;
     private String direction;
     private String email;
+
+    @OneToMany(mappedBy = "client")
+    private List<Purchase> purchaseList;
 
     public String getIdClient() {
         return idClient;

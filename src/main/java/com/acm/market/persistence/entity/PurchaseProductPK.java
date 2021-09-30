@@ -7,10 +7,10 @@ import java.io.Serializable;
 @Embeddable
 public class PurchaseProductPK implements Serializable {
     @Column(name = "id_purchase")
-    private  Integer idPurchase;
+    private Integer idPurchase;
 
     @Column(name = "id_product")
-    private  Integer idProduct;
+    private Integer idProduct;
 
     public Integer getIdPurchase() {
         return idPurchase;
