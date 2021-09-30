@@ -19,12 +19,12 @@ public class Product {
     private String barCode;
 
     @Column(name = "sale_price")
-    private double salePrice;
+    private Double salePrice;
 
     @Column(name = "mount_stock")
     private Integer mountStock;
 
-    private boolean status;
+    private Boolean status;
 
     public Integer getIdProduct() {
         return idProduct;
