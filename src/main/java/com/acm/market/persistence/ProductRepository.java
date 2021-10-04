@@ -13,24 +13,25 @@ import java.util.Optional;
 public class ProductRepository implements com.acm.market.domain.repository.ProductRepository {
     @Autowired
     private ProductCrudRepository productCrudRepository;
+    @Autowired
     private ProductMapper mapper;
 
     @Override
     public List<com.acm.market.domain.Product> getAll() {
         List<Product> productList = (List<Product>) productCrudRepository.findAll();
-        return mapper.toProucts(productList);
+        return mapper.toProducts(productList);
     }
 
     @Override
     public Optional<List<com.acm.market.domain.Product>> getByCategory(int idCategory) {
         List<Product> products = productCrudRepository.findByIdCategoryOrderByNameAsc(idCategory);
-        return Optional.of(mapper.toProucts(products));
+        return Optional.of(mapper.toProducts(products));
     }
 
     @Override
     public Optional<List<com.acm.market.domain.Product>> getStockProducts(int mount) {
         Optional<List<Product>> products = productCrudRepository.findByMountStockLessThanAndStatus(mount, true);
-        return products.map(prods -> mapper.toProucts(prods));
+        return products.map(prods -> mapper.toProducts(prods));
     }
 
     @Override

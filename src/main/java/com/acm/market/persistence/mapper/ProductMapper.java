@@ -22,7 +22,7 @@ public interface ProductMapper {
     })
     Product toProduct(com.acm.market.persistence.entity.Product product);
 
-    List<Product> toProucts(List<com.acm.market.persistence.entity.Product> products);
+    List<Product> toProducts(List<com.acm.market.persistence.entity.Product> products);
 
     @InheritInverseConfiguration
     @Mapping(target = "barCode", ignore = true)
