@@ -3,6 +3,7 @@ package com.acm.market.persistence;
 import com.acm.market.persistence.crud.ProductCrudRepository;
 import com.acm.market.persistence.entity.Product;
 import com.acm.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
