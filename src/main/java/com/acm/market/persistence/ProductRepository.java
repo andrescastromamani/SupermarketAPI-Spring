@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @Repository
 public class ProductRepository implements com.acm.market.domain.repository.ProductRepository {
+    @Autowired
     private ProductCrudRepository productCrudRepository;
     private ProductMapper mapper;
 
