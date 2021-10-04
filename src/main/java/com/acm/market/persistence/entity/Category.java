@@ -10,7 +10,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_category")
     private Integer idCategory;
-
     private String description;
     private Boolean status;
 
@@ -39,5 +38,13 @@ public class Category {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 }

@@ -86,4 +86,12 @@ public class Product {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }

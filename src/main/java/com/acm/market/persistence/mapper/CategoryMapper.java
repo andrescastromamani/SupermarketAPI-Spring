@@ -16,6 +16,6 @@ public interface CategoryMapper {
     Category toCategory(com.acm.market.persistence.entity.Category category);
 
     @InheritInverseConfiguration
-    @Mapping(target = "products", ignore = true)
+    @Mapping(target = "productList", ignore = true)
     com.acm.market.persistence.entity.Category toCat(Category category);
 }

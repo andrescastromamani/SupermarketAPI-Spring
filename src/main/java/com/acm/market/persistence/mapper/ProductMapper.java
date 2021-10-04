@@ -18,6 +18,7 @@ public interface ProductMapper {
             @Mapping(source = "salePrice", target = "price"),
             @Mapping(source = "mountStock", target = "stock"),
             @Mapping(source = "status", target = "active"),
+            @Mapping(source = "category", target = "category")
     })
     Product toProduct(com.acm.market.persistence.entity.Product product);
 
@@ -25,5 +26,5 @@ public interface ProductMapper {
 
     @InheritInverseConfiguration
     @Mapping(target = "barCode", ignore = true)
-    com.acm.market.persistence.entity.Product toCat(Product product);
+    com.acm.market.persistence.entity.Product toProd(Product product);
 }
