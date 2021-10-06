@@ -14,7 +14,7 @@ public class Purchase {
     private Integer idPurchase;
 
     @Column(name = "id_client")
-    private Integer idClient;
+    private String idClient;
 
     private LocalDateTime date;
 
@@ -28,7 +28,7 @@ public class Purchase {
     @JoinColumn(name = "id_client", insertable = false, updatable = false)
     private Client client;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "purchase", cascade = {CascadeType.ALL})
     private List<PurchaseProduct> purchaseProductList;
 
     public Integer getIdPurchase() {
@@ -39,11 +39,11 @@ public class Purchase {
         this.idPurchase = idPurchase;
     }
 
-    public Integer getIdClient() {
+    public String getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(Integer idClient) {
+    public void setIdClient(String idClient) {
         this.idClient = idClient;
     }
 
@@ -77,5 +77,13 @@ public class Purchase {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public List<PurchaseProduct> getPurchaseProductList() {
+        return purchaseProductList;
+    }
+
+    public void setPurchaseProductList(List<PurchaseProduct> purchaseProductList) {
+        this.purchaseProductList = purchaseProductList;
     }
 }
