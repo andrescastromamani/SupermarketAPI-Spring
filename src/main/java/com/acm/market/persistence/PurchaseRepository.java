@@ -13,7 +13,7 @@ import java.util.Optional;
 public class PurchaseRepository implements com.acm.market.domain.repository.PurchaseRepository {
     @Autowired
     private PurchaseCrudRepository purchaseCrudRepository;
-    //@Autowired
+    @Autowired
     private PurchaseMapper mapper;
 
     @Override

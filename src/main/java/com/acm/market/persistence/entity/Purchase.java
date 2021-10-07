@@ -86,4 +86,12 @@ public class Purchase {
     public void setPurchaseProductList(List<PurchaseProduct> purchaseProductList) {
         this.purchaseProductList = purchaseProductList;
     }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
 }

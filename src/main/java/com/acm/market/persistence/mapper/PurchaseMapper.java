@@ -24,8 +24,6 @@ public interface PurchaseMapper {
     List<Purchase> toPurchases(List<com.acm.market.persistence.entity.Purchase> purchases);
 
     @InheritInverseConfiguration
-    @Mappings({
-            @Mapping(target = "client", ignore = true)
-    })
+    @Mapping(target = "client", ignore = true)
     com.acm.market.persistence.entity.Purchase toPur(Purchase purchase);
 }
