@@ -1,0 +1,1 @@
+web: java -jar -Dspring.profiles.active=pro build/libs/acm-market-1.0.jar
